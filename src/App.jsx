@@ -1,4 +1,5 @@
 import './App.css'
+<<<<<<< HEAD
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './pages/Home'
 import './pages/About'
@@ -14,6 +15,16 @@ function App() {
         <Route path='/about' element={<About/>}/>
       </Routes>
       </BrowserRouter>
+=======
+
+function App() {
+
+  return (
+    <>
+      <h1>Code xstep byh step</h1>
+
+      <h1>hello react</h1>
+>>>>>>> 157f9552c610c5f0174bf8db198cc541ed945d49
     </>
   )
 }
