@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import '../../styles/sidebar.css'
+import { NavLink } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
+
 const Sidebar = () => {
   console.log("Sidebar loaded mbefk")
   const [isOpen, setIsOpen] = useState(false)
@@ -7,6 +10,7 @@ const Sidebar = () => {
   const toggleSidebar = () => {
     setIsOpen(!isOpen)
   }
+  const location = useLocation();
 
   const navItems = [
     { href: '/', icon: 'fa-solid fa-house', label: 'Home' },
@@ -22,13 +26,29 @@ const Sidebar = () => {
     <div className={`sidebar ${isOpen ? 'active' : ''}`} id="sidebar">
       
       <h2>Dashboard</h2>
-      <ul>
+      {/* <ul>
         {navItems.map((item) => (
           <li key={item.label}>
             <a href={item.href}>
               <i className={item.icon}></i>
               {item.label}
             </a>
+          </li>
+        ))}
+      </ul> */}
+
+       <ul>
+        {navItems.map((item) => (
+          <li key={item.path}>
+
+            <Link
+              to={item.path}
+              className={location.pathname === item.path ? "active" : ""}
+            >
+              <i className={`fa-solid ${item.icon}`}></i>
+              <span>{item.label}</span>
+            </Link>
+
           </li>
         ))}
       </ul>

@@ -11,7 +11,7 @@ function App() {
  console.log("hel;lo app.jsx")
   return (
     <Layout>
-      <BrowserRouter>
+      {/* <BrowserRouter> */}
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/profile' element={<Profile/>}/>
@@ -19,7 +19,7 @@ function App() {
         <Route path='/about-us' element={<About/>}/>
 
       </Routes>
-      </BrowserRouter>
+      {/* </BrowserRouter> */}
     </Layout>
   )
 }
