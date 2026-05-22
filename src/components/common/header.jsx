@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import '../../styles/header.css'
 const Header = () => {
     const [open, setOpen] = useState(false);
@@ -20,7 +20,7 @@ const Header = () => {
 
         <div className="right">
 
-      <div className="user-menu right" onMouseEnter={}>
+      <div className="user-menu right" >
 
         <div className="user-icon" onClick={toggleDropdown}>
           <i className="fa-solid fa-user"></i>

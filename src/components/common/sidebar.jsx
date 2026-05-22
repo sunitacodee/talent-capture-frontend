@@ -26,7 +26,7 @@ const Sidebar = () => {
     <div className={`sidebar ${isOpen ? 'active' : ''}`} id="sidebar">
       
       <h2>Dashboard</h2>
-      {/* <ul>
+      <ul>
         {navItems.map((item) => (
           <li key={item.label}>
             <a href={item.href}>
@@ -35,23 +35,9 @@ const Sidebar = () => {
             </a>
           </li>
         ))}
-      </ul> */}
-
-       <ul>
-        {navItems.map((item) => (
-          <li key={item.path}>
-
-            <Link
-              to={item.path}
-              className={location.pathname === item.path ? "active" : ""}
-            >
-              <i className={`fa-solid ${item.icon}`}></i>
-              <span>{item.label}</span>
-            </Link>
-
-          </li>
-        ))}
       </ul>
+
+       
     </div>
     </>
   )
